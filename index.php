@@ -7,10 +7,10 @@ if (isset($_GET['search'])) {
  	require_once('templates/TwitterAPIExchange.php');
 
 	$settings = array(
-		'oauth_access_token' => "16147916-qsT56PZxIMMg7FFQiJ5kJZ1aD2EAuYZ18OWLAuHco",
-	    'oauth_access_token_secret' => "1ytqvHJBFUjNSdVUWXFlq9zDEr5Avn3DrMcxaYLvpyriy",
-	    'consumer_key' => "HMPB8ntarZ629bHQF6NUzDjSL",
-	    'consumer_secret' => "pvRQIvbUguw83TqiWsOb9hEHUTOoXUf2UPeNmudE91Z562rC79"
+	    'oauth_access_token' => "YOURSETTINGSHERE",
+	    'oauth_access_token_secret' => "YOURSETTINGSHERE",
+	    'consumer_key' => "YOURSETTINGSHERE",
+	    'consumer_secret' => "YOURSETTINGSHERE"
 	);
 
  	$artist = $_GET['search'];
