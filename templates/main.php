@@ -53,13 +53,22 @@
       <div class="starter-template">
      <?php
 
-		echo "<h1>$artist</h1>";
+		echo "<h1>" . $spotify_json['artists']['items']['0']['name'] . "</h1>";
+		echo "<p>Genres: ";
+		foreach($spotify_json['artists']['items']['0']['genres'] as $genres) {
+			echo "$genres, ";
+		} 
+		echo "</p>";
 		
-		echo "<p>$spotify_string</p>";
-
+		echo "<p><img src=\"" . $spotify_json['artists']['items']['0']['images']['2']['url'] . "\"></img></p> ";
 		echo "<h1>Twitter</h1>";
 
-		echo "<p>$twitter_string</p>"
+		echo "<table class=\"table table-striped\">";
+		echo "<thead><tr><th>Created at</th><th>Tweet</th></tr></thead>";
+		foreach($twitter_string as $tweets) {
+			echo "<tr><td>" . $tweets["created_at"] . "</td><td>" . $tweets["text"] . "</td></tr>";
+		}
+		echo "</table>";
 	?>
 
 
